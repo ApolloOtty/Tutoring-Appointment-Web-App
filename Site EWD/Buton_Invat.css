@@ -1,0 +1,71 @@
+@keyframes buton {
+    0% {left: -500px;}
+    100% {left: 0%;}
+  }
+
+
+  .buton{
+    position: relative;
+    top: 380px;
+    width: 35%;
+    border: 0px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .incepe{       
+    cursor: pointer;
+    position: absolute;                       
+    animation-name: buton;
+    animation-duration:2s;
+    padding: 50px 20px;
+   border: unset;
+   border-radius: 50px;
+   color: #212121;
+   z-index: 1;
+   background: #e8e8e8;
+   position: relative;
+   font-weight: 700;
+   font-size: 30px;
+   transition: all 250ms;
+   overflow: hidden;
+  }
+  
+  .incepe::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #cbc0e4;
+    z-index: -1;
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+   }
+  
+   
+  .incepe:hover::before {
+    width: 100%;
+   }
+
+   @media screen and (max-width: 650px) {
+    .buton{
+        width: 100%;
+    }
+    }
+
+@media screen and (max-width: 1425px) {
+    .buton{
+        animation-name: buton_resize;
+        animation-duration:2s;
+        top: -10px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

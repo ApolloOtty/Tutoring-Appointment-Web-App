@@ -1,0 +1,41 @@
+
+.bg{
+  animation-name: background;
+  animation-duration: 2s;
+  float: right;
+  position: relative;
+  width: 105%;
+  z-index: -1;
+}
+
+@keyframes background {
+  0% {right: -350px;}
+  100% {right: 0px;}
+}
+
+@keyframes titlu {
+  0% {right: -600px;}
+  100% {right: 70px;}
+}
+
+@keyframes titlu2 {
+  0% {left: -600px;}
+  100% {left: 20%;}
+}
+
+.titlu{
+  animation-name: titlu;
+  animation-duration: 2.5s;
+  position: absolute;
+  right: 70px;
+  font-size: 450%;
+  color: black;
+}
+
+@media screen and (max-width: 935px) {
+  .titlu{
+    animation-name: titlu2;
+    left: 20%;
+    font-size: 4vw;
+  }
+}
